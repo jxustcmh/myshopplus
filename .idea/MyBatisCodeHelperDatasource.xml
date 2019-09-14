@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="addSerializeUid" value="true" />
+        <option name="commonMapperBaseClass" value="tk.mybatis.mapper.MyMapper" />
+        <option name="deleteByPrimayKeyEnabled" value="false" />
+        <option name="insertMethodEnabled" value="false" />
+        <option name="insertSelectiveMethodEnabled" value="false" />
+        <option name="javaMapperPackage" value="com.hx.myshop.plus.provider.mapper" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-service/src/main/java" />
+        <option name="javaModelPackage" value="com.hx.myshop.plus.provider.model" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-service/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="ums-admin-provider-service" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="ums-admin-provider-api">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.hx.myshop.plus.provider.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-api/src/main/java" />
+                  <option name="javaModelPacakge" value="com.hx.myshop.plus.provider.model" />
+                  <option name="javaModelPath" value="D:\IdeaProjects\myshopplus\myshopplus-provider\ums-admin-provider-api\src\main\java" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-api/src/main/java" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-api/src/main/java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="D:\IdeaProjects\myshopplus\myshopplus-provider\ums-admin-provider-service\src\main\resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="ums-admin-provider-service">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.hx.myshop.plus.provider.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-service/src/main/java" />
+                  <option name="javaModelPacakge" value="com.hx.myshop.plus.provider.model" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-service/src/main/java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-service/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="selectByPrimaryKeyEnabled" value="false" />
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="myshopplus:ums_admin">
+              <value>
+                <TableGenerateConfig>
+                  <option name="deleteByPrimayKeyEnabled" value="false" />
+                  <option name="generatedKey" value="id" />
+                  <option name="insertMethodEnabled" value="false" />
+                  <option name="insertSelectiveMethodEnabled" value="false" />
+                  <option name="javaModelName" value="UmsAdmin" />
+                  <option name="moduleName" value="ums-admin-provider-service" />
+                  <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
+                  <option name="updateByPrimaykeyEnabled" value="false" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
+        <option name="updateByPrimaykeyEnabled" value="false" />
+        <option name="useCommonMapper" value="true" />
+        <option name="useLomBokOnModel" value="true" />
+        <option name="xmlMapperPackage" value="mapper" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-service/src/main/resources" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>
