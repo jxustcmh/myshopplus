@@ -23,8 +23,6 @@ public class TestMySqlConnection {
     @Test
     public void getAllAdmin() {
         List<UmsAdmin> umsAdmins = umsAdminMapper.selectAll();
-        umsAdmins.forEach(item ->{
-            System.out.println(item);
-        });
+        umsAdmins.forEach(System.out::println);
     }
 }
