@@ -6,8 +6,10 @@
 
     <modules>
         <module>myshopplus-dependencies</module>
+        <module>commons</module>
         <module>myshopplus-provider</module>
         <module>myshopplus-bussiness</module>
+
     </modules>
     <!--添加springboot支持-->
     <parent>
