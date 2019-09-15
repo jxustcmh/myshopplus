@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>business-register</module>
+        <module>business-oauth2</module>
     </modules>
     <dependencies>
 
@@ -24,14 +25,11 @@
         </dependency>
 
         <!-- Spring Cloud Alibaba -->
-
+<!--
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-        </dependency>
-
-
-
+        </dependency>-->
         <!-- Commons -->
 
         <dependency>
@@ -47,7 +45,6 @@
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-okhttp</artifactId>
         </dependency>
-
         <!-- Projects -->
     </dependencies>
 

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: business-register
+    name: business-oauth2
   main:
     allow-bean-definition-overriding: true
   jackson:
@@ -11,8 +11,7 @@ spring:
       discovery:
         server-addr: 182.92.5.36:8848
 server:
-  # ${random.int[9000,9999]} 随机端口
-  port: 9000
+  port: 9001
 
 dubbo:
   scan:

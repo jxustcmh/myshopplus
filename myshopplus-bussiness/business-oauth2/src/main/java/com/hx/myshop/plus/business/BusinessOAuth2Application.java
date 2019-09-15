@@ -2,15 +2,14 @@ package com.hx.myshop.plus.business;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author jxlgcmh
- * @date 2019-09-14 19:03
+ * @date 2019-09-15 11:12
  */
 @SpringBootApplication
-public class BusinessRegApplication {
+public class BusinessOAuth2Application {
     public static void main(String[] args) {
-        SpringApplication.run(BusinessRegApplication.class,args);
+        SpringApplication.run(BusinessOAuth2Application.class,args);
     }
 }
