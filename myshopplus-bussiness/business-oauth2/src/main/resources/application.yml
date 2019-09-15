@@ -27,3 +27,8 @@ management:
     web:
       exposure:
         include: "*"
+business:
+  oauth2:
+    granttype: password
+    clientid: client
+    clientsecret: secret

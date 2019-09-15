@@ -21,7 +21,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private static final String PASSWORD = "$2a$10$WhCuqmyCsYdqtJvM0/J4seCU.xZQHe2snNE5VFUuBGUZWPbtdl3GG";
 
     @Override
-    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        if (!USERNAME.equals(username)) {
+            return null;
+        }
         List<GrantedAuthority> grantedAuthorities = Lists.newArrayList();
         return new User(USERNAME, PASSWORD, grantedAuthorities);
     }
