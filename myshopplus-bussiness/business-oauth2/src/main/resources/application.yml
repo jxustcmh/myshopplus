@@ -15,7 +15,7 @@ server:
 
 dubbo:
   scan:
-    base-packages: com.hx.myshop.plus.business.web
+    base-packages: com.hx.myshop.plus.business.web,com.hx.myshop.plus.business.service
   protocol:
     name: dubbo
     port: -1
@@ -32,3 +32,10 @@ business:
     granttype: password
     clientid: client
     clientsecret: secret
+
+# 开启 Feign 的 OKHttp 方式
+feign:
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false

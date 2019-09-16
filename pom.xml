@@ -9,6 +9,7 @@
         <module>commons</module>
         <module>myshopplus-provider</module>
         <module>myshopplus-bussiness</module>
+        <module>configuration</module>
 
     </modules>
     <!--添加springboot支持-->

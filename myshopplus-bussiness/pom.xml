@@ -14,6 +14,7 @@
     <modules>
         <module>business-register</module>
         <module>business-oauth2</module>
+        <module>business-profile</module>
     </modules>
     <dependencies>
 

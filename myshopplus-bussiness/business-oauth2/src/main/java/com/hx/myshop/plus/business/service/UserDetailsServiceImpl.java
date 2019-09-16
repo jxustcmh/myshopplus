@@ -1,7 +1,11 @@
 package com.hx.myshop.plus.business.service;
 
 import com.google.common.collect.Lists;
+import com.hx.myshop.plus.provider.api.UmsAdminService;
+import com.hx.myshop.plus.provider.model.UmsAdmin;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -17,15 +21,17 @@ import java.util.List;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    private static final String USERNAME = "admin";
-    private static final String PASSWORD = "$2a$10$WhCuqmyCsYdqtJvM0/J4seCU.xZQHe2snNE5VFUuBGUZWPbtdl3GG";
-
+    @Reference(version = "1.0.1")
+    private UmsAdminService umsAdminService;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        if (!USERNAME.equals(username)) {
+        UmsAdmin umsAdmin = umsAdminService.getByUserName(username);
+        if (umsAdmin == null) {
             return null;
         }
         List<GrantedAuthority> grantedAuthorities = Lists.newArrayList();
-        return new User(USERNAME, PASSWORD, grantedAuthorities);
+        SimpleGrantedAuthority grantedAuthority = new SimpleGrantedAuthority("USER");
+        grantedAuthorities.add(grantedAuthority);
+        return new User(umsAdmin.getUsername(), umsAdmin.getPassword(), grantedAuthorities);
     }
 }
