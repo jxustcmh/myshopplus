@@ -18,7 +18,6 @@ import javax.annotation.Resource;
  */
 @RestController
 @RequestMapping("/reg")
-@CrossOrigin(origins = "*", maxAge = 3600)
 public class RegisterController {
 
     @Reference(version = "1.0.1")

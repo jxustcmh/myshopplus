@@ -10,6 +10,7 @@
         <module>myshopplus-provider</module>
         <module>myshopplus-bussiness</module>
         <module>configuration</module>
+        <module>getway</module>
 
     </modules>
     <!--添加springboot支持-->

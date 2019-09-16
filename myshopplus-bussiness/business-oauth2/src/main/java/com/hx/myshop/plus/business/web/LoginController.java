@@ -10,8 +10,6 @@ import com.hx.myshop.plus.provider.model.UmsAdmin;
 import okhttp3.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpRequest;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -21,9 +19,7 @@ import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,7 +29,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/user")
-@CrossOrigin(origins = "*", maxAge = 3600)
 public class LoginController {
 
     public static final String LOGIN_URL = "http://localhost:9001/oauth/token";
