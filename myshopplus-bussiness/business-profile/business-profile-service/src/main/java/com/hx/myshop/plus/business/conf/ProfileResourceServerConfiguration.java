@@ -16,6 +16,13 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 @EnableResourceServer
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true)
 public class ProfileResourceServerConfiguration   extends ResourceServerConfigurerAdapter {
+
+    /**
+     *  这里的配置还是有问题  如果token对，传的用户名是别人的就可以查询别人的信息
+     * @param http
+     * @throws Exception
+     */
+
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http
