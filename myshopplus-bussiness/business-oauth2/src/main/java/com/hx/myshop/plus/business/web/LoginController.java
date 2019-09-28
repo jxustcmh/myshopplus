@@ -51,6 +51,7 @@ public class LoginController {
     @PostMapping("/login")
     public ResponseResult<Map<String,Object>> login(@RequestBody LoginParam loginParam) throws Exception {
         UserDetails userDetails = userDetailsService.loadUserByUsername(loginParam.getUsername());
+        // 特别注意密码的匹配方式
         if (userDetails == null || !passwordEncoder.matches(loginParam.getPassword(),userDetails.getPassword())) {
             return new ResponseResult<>(ResponseResult.CodeStatus.FAILURE,"用户名或密码错误", null);
         }
