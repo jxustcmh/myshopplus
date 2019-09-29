@@ -32,6 +32,18 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         return umsAdminMapper.selectOneByExample(example);
     }
 
+    @Override
+    public int update(UmsAdmin umsAdmin) {
+        UmsAdmin oldUmsAdmin = getByUserName(umsAdmin.getUsername());
+        // 仅更新 邮箱、昵称、备注、状态
+        oldUmsAdmin.setEmail(umsAdmin.getEmail());
+        oldUmsAdmin.setNickName(umsAdmin.getNickName());
+        oldUmsAdmin.setNote(umsAdmin.getNote());
+        oldUmsAdmin.setStatus(umsAdmin.getStatus());
+
+        return umsAdminMapper.updateByPrimaryKey(oldUmsAdmin);
+    }
+
     private void initUmsAdmin(UmsAdmin umsAdmin) {
         umsAdmin.setCreateTime(new Date());
         umsAdmin.setLoginTime(new Date());

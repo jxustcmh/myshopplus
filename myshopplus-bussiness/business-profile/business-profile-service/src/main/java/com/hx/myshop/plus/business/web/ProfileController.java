@@ -1,13 +1,17 @@
 package com.hx.myshop.plus.business.web;
 
+import com.hx.myshop.plus.business.dto.param.ProfileParam;
 import com.hx.myshop.plus.commons.ResponseResult;
 import com.hx.myshop.plus.provider.api.UmsAdminService;
 import com.hx.myshop.plus.provider.model.UmsAdmin;
 import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.beans.BeanUtils;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,5 +39,21 @@ public class ProfileController {
         }
         UmsAdmin umsAdmin = umsAdminService.getByUserName(username);
         return new ResponseResult<>(ResponseResult.CodeStatus.OK,"获取个人信息成功",umsAdmin);
+    }
+
+    @PostMapping("update")
+    public ResponseResult<Void>  update(@RequestBody ProfileParam profileParam){
+        UmsAdmin umsAdmin =new UmsAdmin();
+        BeanUtils.copyProperties(profileParam,umsAdmin);
+        int result = umsAdminService.update(umsAdmin);
+        // 成功
+        if (result > 0) {
+            return new ResponseResult<Void>(ResponseResult.CodeStatus.OK, "更新个人信息成功");
+        }
+
+        // 失败
+        else {
+            return new ResponseResult<Void>(ResponseResult.CodeStatus.FAIL, "更新个人信息失败");
+        }
     }
 }

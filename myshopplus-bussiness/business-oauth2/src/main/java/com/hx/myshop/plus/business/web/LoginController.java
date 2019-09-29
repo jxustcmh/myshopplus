@@ -79,7 +79,7 @@ public class LoginController {
         String userInfoJson = profileFeign.getUserInfo(authentication.getName());
         UmsAdmin umsAdmin = MapperUtil.json2pojoByTree(userInfoJson, "data", UmsAdmin.class);
         LoginInfo loginInfo =new LoginInfo();
-        loginInfo.setName(umsAdmin.getNickName());
+        loginInfo.setName(umsAdmin.getUsername());
         loginInfo.setAvatar(umsAdmin.getIcon());
         return new ResponseResult<>(ResponseResult.CodeStatus.OK,"获取用户信息成功",loginInfo);
     }

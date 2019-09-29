@@ -11,6 +11,7 @@
         <module>myshopplus-bussiness</module>
         <module>configuration</module>
         <module>getway</module>
+        <module>cloud</module>
 
     </modules>
     <!--添加springboot支持-->

@@ -24,6 +24,7 @@
         <dubbo-dubbo-registry-nacos-version>2.6.7</dubbo-dubbo-registry-nacos-version>
         <mysql-connector-version>5.1.47</mysql-connector-version>
         <lombok-version>1.18.8</lombok-version>
+        <aliyun-sdk-oss.version>3.6.0</aliyun-sdk-oss.version>
     </properties>
 
     <dependencyManagement>
@@ -44,6 +45,17 @@
                 <version>${spring-cloud-alibaba.verion}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun-sdk-oss.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <!-- Apache Dubbo -->

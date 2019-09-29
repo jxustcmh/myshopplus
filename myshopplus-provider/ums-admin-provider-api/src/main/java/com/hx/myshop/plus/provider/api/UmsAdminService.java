@@ -20,4 +20,11 @@ public interface UmsAdminService {
      * @return 用户对象
      */
     UmsAdmin getByUserName(String userName);
+
+    /**
+     *  更新用户信息
+     * @param umsAdmin 用户对象
+     * @return 更新结果
+     */
+    int update(UmsAdmin umsAdmin);
 }
