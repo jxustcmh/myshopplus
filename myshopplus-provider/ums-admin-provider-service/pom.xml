@@ -11,6 +11,10 @@
 
     <artifactId>ums-admin-provider-service</artifactId>
 
+    <properties>
+        <dubbo-sentinel-version>1.6.3</dubbo-sentinel-version>
+    </properties>
+
     <dependencies>
         <!-- Spring Boot Begin -->
         <dependency>
@@ -102,7 +106,6 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.47</version>
         </dependency>
         <dependency>
             <groupId>tk.mybatis</groupId>
@@ -118,8 +121,22 @@
         </dependency>
         <!-- Projects End -->
 
-
-
+        <!--集成dubbo-sentinel，实现服务降级-->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-dubbo-adapter</artifactId>
+            <version>${dubbo-sentinel-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-transport-netty-http</artifactId>
+            <version>${dubbo-sentinel-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-annotation-aspectj</artifactId>
+            <version>${dubbo-sentinel-version}</version>
+        </dependency>
     </dependencies>
 
     <build>

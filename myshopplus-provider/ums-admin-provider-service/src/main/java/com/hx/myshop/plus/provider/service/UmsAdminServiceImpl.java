@@ -1,6 +1,8 @@
 package com.hx.myshop.plus.provider.service;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.hx.myshop.plus.provider.api.UmsAdminService;
+import com.hx.myshop.plus.provider.fallback.UmsAdminServiceFallback;
 import com.hx.myshop.plus.provider.mapper.UmsAdminMapper;
 import com.hx.myshop.plus.provider.model.UmsAdmin;
 import org.apache.dubbo.config.annotation.Service;
@@ -26,6 +28,7 @@ public class UmsAdminServiceImpl implements UmsAdminService {
     }
 
     @Override
+    @SentinelResource(value = "getByUserName", fallback = "getByUserNameFallback", fallbackClass = UmsAdminServiceFallback.class)
     public UmsAdmin getByUserName(String userName) {
         Example example = new Example(UmsAdmin.class);
         example.createCriteria().andEqualTo("username",userName);
