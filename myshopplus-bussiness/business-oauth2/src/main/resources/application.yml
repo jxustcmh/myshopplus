@@ -10,6 +10,21 @@ spring:
     nacos:
       discovery:
         server-addr: 182.92.5.36:8848
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://jxustcmh.mysql.rds.aliyuncs.com:3306/myshopplus?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: jxlgcmh
+    password: Zxcvb8899+
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 600000
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: MyHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
 server:
   port: 9001
 
@@ -41,3 +56,5 @@ feign:
     enabled: false
   sentinel:
     enabled: true
+
+
