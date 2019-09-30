@@ -44,6 +44,13 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         return umsAdminMapper.updateByPrimaryKey(oldUmsAdmin);
     }
 
+    @Override
+    public int modifyIcon(String username, String path) {
+        UmsAdmin admin = getByUserName(username);
+        admin.setIcon(path);
+        return   umsAdminMapper.updateByPrimaryKey(admin);
+    }
+
     private void initUmsAdmin(UmsAdmin umsAdmin) {
         umsAdmin.setCreateTime(new Date());
         umsAdmin.setLoginTime(new Date());

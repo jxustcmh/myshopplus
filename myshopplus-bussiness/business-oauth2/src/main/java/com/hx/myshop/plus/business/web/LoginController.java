@@ -78,9 +78,16 @@ public class LoginController {
         // 通过feign客户端获取用户信息，再进行json转换
         String userInfoJson = profileFeign.getUserInfo(authentication.getName());
         UmsAdmin umsAdmin = MapperUtil.json2pojoByTree(userInfoJson, "data", UmsAdmin.class);
+
+        // 按照熔断器给到的结果，此时 umsAdmin 为空，我们需要直接将熔断结果返回给客户端
+        if (umsAdmin == null) {
+            return MapperUtil.json2pojo(userInfoJson, ResponseResult.class);
+        }
+
         LoginInfo loginInfo =new LoginInfo();
         loginInfo.setName(umsAdmin.getUsername());
         loginInfo.setAvatar(umsAdmin.getIcon());
+
         return new ResponseResult<>(ResponseResult.CodeStatus.OK,"获取用户信息成功",loginInfo);
     }
 

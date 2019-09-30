@@ -1,5 +1,6 @@
 package com.hx.myshop.plus.business.web;
 
+import com.hx.myshop.plus.business.dto.param.IconParam;
 import com.hx.myshop.plus.business.dto.param.ProfileParam;
 import com.hx.myshop.plus.commons.ResponseResult;
 import com.hx.myshop.plus.provider.api.UmsAdminService;
@@ -38,7 +39,7 @@ public class ProfileController {
             return new ResponseResult<>(ResponseResult.CodeStatus.OK,"非法获取",null);
         }
         UmsAdmin umsAdmin = umsAdminService.getByUserName(username);
-        return new ResponseResult<>(ResponseResult.CodeStatus.OK,"获取个人信息成功",umsAdmin);
+        return new ResponseResult<>(ResponseResult.CodeStatus.OK,"获取头像成功",umsAdmin);
     }
 
     @PostMapping("update")
@@ -48,12 +49,24 @@ public class ProfileController {
         int result = umsAdminService.update(umsAdmin);
         // 成功
         if (result > 0) {
-            return new ResponseResult<Void>(ResponseResult.CodeStatus.OK, "更新个人信息成功");
+            return new ResponseResult<Void>(ResponseResult.CodeStatus.OK, "更新头像成功");
         }
-
         // 失败
         else {
-            return new ResponseResult<Void>(ResponseResult.CodeStatus.FAIL, "更新个人信息失败");
+            return new ResponseResult<Void>(ResponseResult.CodeStatus.FAIL, "更新头像失败");
+        }
+    }
+
+    @PostMapping("modify/icon")
+    public ResponseResult<Void>  modifyIcon(@RequestBody IconParam iconParam){
+        int result = umsAdminService.modifyIcon(iconParam.getUsername(),iconParam.getPath());
+        // 成功
+        if (result > 0) {
+            return new ResponseResult<Void>(ResponseResult.CodeStatus.OK, "更新头像成功");
+        }
+        // 失败
+        else {
+            return new ResponseResult<Void>(ResponseResult.CodeStatus.FAIL, "更新头像失败");
         }
     }
 }

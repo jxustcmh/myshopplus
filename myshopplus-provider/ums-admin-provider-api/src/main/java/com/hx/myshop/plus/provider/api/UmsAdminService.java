@@ -27,4 +27,12 @@ public interface UmsAdminService {
      * @return 更新结果
      */
     int update(UmsAdmin umsAdmin);
+
+    /**
+     *  修改头像
+     * @param username 用户名
+     * @param path 路径
+     * @return 修改结果
+     */
+    int modifyIcon(String username,String path);
 }

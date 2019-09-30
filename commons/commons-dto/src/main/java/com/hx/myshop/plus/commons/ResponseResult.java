@@ -138,6 +138,7 @@ public class ResponseResult<T> implements Serializable {
     public class CodeStatus {
      public static final int OK = 20000;
      public static final int FAIL = 20004;
+     public static final int BREAKING = 20008;
      public static final int FAILURE = 50000;
      public static final int ILLEGAL_TOKEN = 50008;
      public static final int OTHER_CLIENTS_LOGGED_IN = 50012;

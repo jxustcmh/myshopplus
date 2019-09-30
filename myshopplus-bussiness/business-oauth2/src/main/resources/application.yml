@@ -39,3 +39,5 @@ feign:
     enabled: true
   httpclient:
     enabled: false
+  sentinel:
+    enabled: true
