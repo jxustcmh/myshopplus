@@ -49,23 +49,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-        <!-- Projects -->
-        <dependency>
-            <groupId>com.hx</groupId>
-            <artifactId>commons-dto</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.hx</groupId>
-            <artifactId>commons-utils</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.hx</groupId>
-            <artifactId>cloud-upload-feign</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
     </dependencies>
 
     <build>
