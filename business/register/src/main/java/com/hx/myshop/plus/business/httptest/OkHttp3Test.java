@@ -1,6 +1,5 @@
-package com.hx.myshop.plus.business.test;
+package com.hx.myshop.plus.business.httptest;
 
-import com.hx.myshop.plus.commons.ResponseResult;
 import com.hx.myshop.plus.commons.utils.MapperUtil;
 import com.hx.myshop.plus.commons.utils.OkHttpClientUtil;
 import okhttp3.*;

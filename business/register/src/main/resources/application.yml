@@ -10,9 +10,6 @@ spring:
     nacos:
       discovery:
         server-addr: 182.92.5.36:8848
-server:
-  # ${random.int[9000,9999]} 随机端口
-  port: 9000
 
 dubbo:
   scan:
@@ -28,3 +25,6 @@ management:
     web:
       exposure:
         include: "*"
+
+server:
+  port: 9000

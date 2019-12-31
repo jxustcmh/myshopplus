@@ -3,13 +3,9 @@ package com.hx.myshop.plus.business.web;
 import com.hx.myshop.plus.commons.ResponseResult;
 import com.hx.myshop.plus.provider.api.UmsAdminService;
 import com.hx.myshop.plus.provider.model.UmsAdmin;
-import feign.Body;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import javax.annotation.Resource;
-
 
 /**
  * @author jxlgcmh

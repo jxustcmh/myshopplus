@@ -33,3 +33,6 @@ dubbo:
 mybatis:
   mapper-locations: mapper/*.xml
   type-aliases-package: com.hx.myshop.plus.provider.model
+
+server:
+  port: 8081

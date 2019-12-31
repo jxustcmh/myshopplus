@@ -13,19 +13,20 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <!--转json所需-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-           <!-- <scope>provided</scope>-->
         </dependency>
+        <!--持久化-->
         <dependency>
             <groupId>javax.persistence</groupId>
             <artifactId>javax.persistence-api</artifactId>
         </dependency>
+        <!--tk.mybatis-->
         <dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper-spring-boot-starter</artifactId>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
