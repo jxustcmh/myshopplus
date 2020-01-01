@@ -24,6 +24,7 @@
         <dubbo-dubbo-registry-nacos-version>2.6.7</dubbo-dubbo-registry-nacos-version>
         <mysql-connector-version>5.1.47</mysql-connector-version>
         <lombok-version>1.18.8</lombok-version>
+        <bitwalker-version>1.21</bitwalker-version>
         <aliyun-sdk-oss.version>3.6.0</aliyun-sdk-oss.version>
     </properties>
 
@@ -155,6 +156,12 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>eu.bitwalker</groupId>
+                <artifactId>UserAgentUtils</artifactId>
+                <version>${bitwalker-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
