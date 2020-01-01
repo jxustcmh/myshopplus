@@ -11,7 +11,7 @@ import org.springframework.cloud.stream.annotation.EnableBinding;
  * @date 2019-12-31 11:53
  * @description 消息消费者服务
  */
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication
 @EnableBinding({AdminLoginLogSink.class})
 public class MessageAdminLoginLogApplication {
 
