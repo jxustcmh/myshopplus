@@ -2,21 +2,60 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ums-admin-provider-service" />
+        <module name="cloud-message-service" />
+        <module name="commons-provider" />
+        <module name="commons-dto" />
+        <module name="cloud-message-feign" />
+        <module name="configuration-sentinel" />
+        <module name="getway" />
         <module name="ums-admin-provider-api" />
-        <module name="myshopplus-dependencies" />
-        <module name="business-register" />
+        <module name="profile-feign" />
+        <module name="commons-utils" />
+        <module name="register" />
+        <module name="ums-admin-provider-service" />
+        <module name="oauth2" />
+        <module name="cloud-message-api" />
+        <module name="commons-web" />
+        <module name="cloud-upload-feign" />
+        <module name="profile-service" />
+        <module name="cloud-upload-service" />
+        <module name="dependencies" />
+        <module name="message-admin-login-log" />
+        <module name="ums-admin-login-log-provider-service" />
+        <module name="ums-admin-login-log-provider-api" />
+        <module name="cloud-message-dto" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="business-register" options="-parameters" />
-      <module name="myshopplus-provider" options="-parameters" />
+      <module name="cloud-message-api" options="-parameters" />
+      <module name="cloud-message-dto" options="-parameters" />
+      <module name="cloud-message-feign" options="-parameters" />
+      <module name="cloud-message-service" options="-parameters" />
+      <module name="cloud-upload-feign" options="-parameters" />
+      <module name="cloud-upload-service" options="-parameters" />
+      <module name="commons-dto" options="-parameters" />
+      <module name="commons-provider" options="-parameters" />
+      <module name="commons-utils" options="-parameters" />
+      <module name="commons-web" options="-parameters" />
+      <module name="configuration-feign" options="-parameters" />
+      <module name="configuration-sentinel" options="-parameters" />
+      <module name="getway" options="-parameters" />
+      <module name="message" options="-parameters" />
+      <module name="message-admin-login-log" options="-parameters" />
+      <module name="oauth2" options="-parameters" />
+      <module name="profile-feign" options="-parameters" />
+      <module name="profile-service" options="-parameters" />
+      <module name="provider" options="-parameters" />
+      <module name="register" options="-parameters" />
+      <module name="ums-admin-login-log-provider-api" options="-parameters" />
+      <module name="ums-admin-login-log-provider-service" options="-parameters" />
       <module name="ums-admin-provider-api" options="-parameters" />
       <module name="ums-admin-provider-service" options="-parameters" />
     </option>

@@ -6,15 +6,48 @@
         <option name="addSerializeUid" value="true" />
         <option name="commonMapperBaseClass" value="tk.mybatis.mapper.MyMapper" />
         <option name="deleteByPrimayKeyEnabled" value="false" />
+        <option name="generateService" value="true" />
+        <option name="generateServiceInterface" value="true" />
         <option name="insertMethodEnabled" value="false" />
         <option name="insertSelectiveMethodEnabled" value="false" />
         <option name="javaMapperPackage" value="com.hx.myshop.plus.provider.mapper" />
-        <option name="javaMapperPath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-service/src/main/java" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/provider/ums-admin-login-log-provider-service/src/main/java" />
         <option name="javaModelPackage" value="com.hx.myshop.plus.provider.model" />
-        <option name="javaModelPath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-service/src/main/java" />
-        <option name="lastDatabaseCrudChooseModuleName" value="ums-admin-provider-service" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/provider/ums-admin-login-log-provider-service/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="ums-admin-login-log-provider-service" />
+        <option name="lombokDataAnnotation" value="true" />
         <option name="moduleNameToPackageAndPathMap">
           <map>
+            <entry key="ums-admin-login-log-provider-api">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.hx.myshop.plus.provider.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/provider/ums-admin-login-log-provider-api/src/main/java" />
+                  <option name="javaModelPacakge" value="com.hx.myshop.plus.provider.model" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/provider/ums-admin-login-log-provider-api/src/main/java" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/provider/ums-admin-login-log-provider-api/src/main/java" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/provider/ums-admin-login-log-provider-api/src/main/java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/provider/ums-admin-login-log-provider-api/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="ums-admin-login-log-provider-service">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.hx.myshop.plus.provider.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/provider/ums-admin-login-log-provider-service/src/main/java" />
+                  <option name="javaModelPacakge" value="com.hx.myshop.plus.provider.model" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/provider/ums-admin-login-log-provider-service/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="com.hx.myshop.plus.provider.api" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/provider/ums-admin-login-log-provider-service/src/main/java" />
+                  <option name="javaServicePackage" value="com.hx.myshop.plus.provider.service" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/provider/ums-admin-login-log-provider-service/src/main/java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/provider/ums-admin-login-log-provider-service/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
             <entry key="ums-admin-provider-api">
               <value>
                 <UserPackageAndPathInfoByModule>
@@ -36,6 +69,8 @@
                   <option name="javaMapperPath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-service/src/main/java" />
                   <option name="javaModelPacakge" value="com.hx.myshop.plus.provider.model" />
                   <option name="javaModelPath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-service/src/main/java" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/provider/ums-admin-provider-service/src/main/java" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/provider/ums-admin-provider-service/src/main/java" />
                   <option name="xmlPackage" value="mapper" />
                   <option name="xmlPath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-service/src/main/resources" />
                 </UserPackageAndPathInfoByModule>
@@ -43,6 +78,7 @@
             </entry>
           </map>
         </option>
+        <option name="mybatisPlusStaticField" value="false" />
         <option name="selectByPrimaryKeyEnabled" value="false" />
         <option name="tableGenerateConfigs">
           <map>
@@ -62,6 +98,24 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="myshopplus:ums_admin_login_log">
+              <value>
+                <TableGenerateConfig>
+                  <option name="deleteByPrimayKeyEnabled" value="false" />
+                  <option name="generatedKey" value="id" />
+                  <option name="insertMethodEnabled" value="false" />
+                  <option name="insertSelectiveMethodEnabled" value="false" />
+                  <option name="javaModelName" value="UmsAdminLoginLog" />
+                  <option name="moduleName" value="ums-admin-login-log-provider-service" />
+                  <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
+                  <option name="updateByPrimaykeyEnabled" value="false" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
           </map>
         </option>
         <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
@@ -69,7 +123,7 @@
         <option name="useCommonMapper" value="true" />
         <option name="useLomBokOnModel" value="true" />
         <option name="xmlMapperPackage" value="mapper" />
-        <option name="xmlMapperPath" value="$PROJECT_DIR$/myshopplus-provider/ums-admin-provider-service/src/main/resources" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/provider/ums-admin-login-log-provider-service/src/main/resources" />
       </ProjectProfile>
     </option>
   </component>

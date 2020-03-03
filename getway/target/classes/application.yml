@@ -1,0 +1,45 @@
+base:
+  config:
+    nacos:
+      hostname : 182.92.5.36:8848
+
+
+spring:
+  application:
+    name: gatway
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${base.config.nacos.hostname}
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: business-oauth2
+          uri: lb://business-oauth2
+          predicates:
+            - Path=/api/user/**
+          filters:
+            - StripPrefix=1
+        - id: business-profile
+          uri: lb://business-profile
+          predicates:
+            - Path=/api/profile/**
+          filters:
+            - StripPrefix=1
+        - id: CLOUD-UPLOAD
+          uri: lb://cloud-upload
+          predicates:
+            - Path=/api/upload/**
+          filters:
+            - StripPrefix=1
+
+server:
+  port: 8888
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
