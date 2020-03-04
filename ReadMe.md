@@ -13,7 +13,8 @@ MyShopPlus 用户服务提供者
 
 
 项目启动步骤：
-1-启动[用户]服务提供者-provider
+1-启动[用户]服务提供者-UmsAdminProviderApplication
+
 
 
 

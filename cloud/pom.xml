@@ -8,6 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <description>这个模块是用用来引用第三服务的模块</description>
 
     <artifactId>cloud</artifactId>
     <packaging>pom</packaging>
