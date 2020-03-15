@@ -14,6 +14,14 @@ MyShopPlus 用户服务提供者
 
 项目启动步骤：
 1-启动[用户]服务提供者-UmsAdminProviderApplication
+2-启动网关-GatewayApplication
+3-启动用户注册服务-BusinessRegApplication
+4-启动文件上传服务-CloudUploadApplication
+5-启动认证服务-BusinessOAuth2Application
+6-启动个人信息服务-BusinessProfileApplication
+7-启动消息生产者服务-CloudMessageApplication
+8-启动消息消费者服务
+9-启动登录认证服务
 
 
 
